@@ -28,7 +28,7 @@ exports.getPost = async (req, res, next) => {
     const postId = req.params.postId;
     try {
         const post = await Post.findById(postId);
-        res.status(200).json({ message: "Post fetched successfully!", post: post });
+        res.status(200).json({ message: "Post fetched successfully!", postDetails: post });
     } catch (error) {
         console.log(error);
     }

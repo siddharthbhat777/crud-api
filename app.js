@@ -14,7 +14,7 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-app.use('/crud', crudRoutes);
+app.use(crudRoutes);
 
 mongoose.connect(process.env.MONGO_URL).then((result) => {
     console.log("Database Connected!");
